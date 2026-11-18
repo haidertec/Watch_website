@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alberto Watch Co.</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="my-nav">
+    <div class="nav-inner">
+      <a class="navbar-brand" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">ALBERTO</a>
+      <div class="nav-links">
+        <a class="my-link" href="#hero" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'}); return false;">HOME</a>
+        <a class="my-link" href="#collection" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'}); return false;">GALLERY</a>
+        <div class="dropdown" id="categoryDropdown">
+          <button class="my-link" onclick="toggleDropdown(event)">CATEGORIES</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" data-cat="smart">Smart</a>
+            <a class="dropdown-item" href="#" data-cat="sport">Sport</a>
+            <a class="dropdown-item" href="#" data-cat="latest">Latest</a>
+            <a class="dropdown-item" href="#" data-cat="limited">Limited Edition</a>
+          </div>
+        </div>
+        <a class="my-link" href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'}); return false;">ABOUT</a>
+        <a class="my-link" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); return false;">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero" id="hero">
+    <h1>Welcome To<br> Alberto Company </h1>
+    <p class="hero-sub">Luxury Watches Collection</p>
+  </div>
+
+  <section id="collection" class="section">
+    <h2>Our Collection</h2>
+    <p class="section-sub">Handmade in Switzerland since 1881</p>
+
+    <div class="grid" id="watchGrid">
+
+      <div class="card-item" data-cat="sport">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800" alt="Royal Chronograph">
+          <div class="card-body">
+            <h5 class="card-title">Royal Chronograph</h5>
+            <p class="card-desc">My uncle had one of these. He used the stopwatch every time he cooked — said it made him feel like a race car driver. Gold steel case, sapphire glass, Swiss movement. Twenty years later, it still looks new.</p>
+            <div class="card-footer">
+              <span class="price">$1,299</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-cat="sport">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800" alt="Midnight Automatic">
+          <div class="card-body">
+            <h5 class="card-title">Midnight Automatic</h5>
+            <p class="card-desc">Black dial. Leather strap. See-through back. That's it — no fuss. It runs on its own for 42 hours even if you take it off. You forget you're wearing it until someone asks.</p>
+            <div class="card-footer">
+              <span class="price">$899</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-cat="limited">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800" alt="Heritage Gold">
+          <div class="card-body">
+            <h5 class="card-title">Heritage Gold</h5>
+            <p class="card-desc">Solid 18k gold. Only 100 pieces made in the entire world. The movement is hand-decorated — flip it over and you'll understand the price. A safe investment you can actually wear.</p>
+            <div class="card-footer">
+              <span class="price">$4,850</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-cat="sport">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800" alt="Sport Diver Pro">
+          <div class="card-body">
+            <h5 class="card-title">Sport Diver Pro</h5>
+            <p class="card-desc">Think of it as a Submariner's cousin — same dive look, same 300m water resistance, but half the price. The bracelet has a special clasp that opens wider if you wear a wetsuit.</p>
+            <div class="card-footer">
+              <span class="price">$1,650</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-cat="latest">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=800" alt="Imperial Steel">
+          <div class="card-body">
+            <h5 class="card-title">Imperial Steel</h5>
+            <p class="card-desc">Skeleton dial. Full Swiss movement. No battery, no fuss. Every gear and spring is visible — you'll catch yourself staring at your wrist more than usual.</p>
+            <div class="card-footer">
+              <span class="price">$2,100</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" data-cat="smart">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?w=800" alt="Silver Moon">
+          <div class="card-body">
+            <h5 class="card-title">Silver Moon</h5>
+            <p class="card-desc">Quiet watch for quiet people. Silver face, tiny moon window at 6 o'clock. Runs on a Swiss quartz — set it and forget it. Good for someone who doesn't want to announce their arrival.</p>
+            <div class="card-footer">
+              <span class="price">$1,050</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="sport">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=800" alt="Vintage Classic">
+          <div class="card-body">
+            <h5 class="card-title">Vintage Classic</h5>
+            <p class="card-desc">Cream face. Roman numbers. Hand-wound movement. This is what watches looked like in the 1950s, and it still works. Small 36mm case — some might say too small — but that's the point. If you like old things, you'll love this.</p>
+            <div class="card-footer">
+              <span class="price">$780</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="limited">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=800" alt="Noir Executive">
+          <div class="card-body">
+            <h5 class="card-title">Noir Executive</h5>
+            <p class="card-desc">All black, with gold details. The PVD coating resists scratches, and the gold bezel, hands, and crown make it look sharp without being loud. It's the kind of watch you wear to a meeting and then keep on for dinner.</p>
+            <div class="card-footer">
+              <span class="price">$1,499</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="smart">
+        <div class="card-box">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.NJ-DGXc2-EiqkJECbgVlvwHaHZ?w=600" alt="Square Classic">
+          <div class="card-body">
+            <h5 class="card-title">Square Classic</h5>
+            <p class="card-desc">Square case, exposed screws, clean dial. This design has been around for over a century and it still looks modern. Works with a suit and with a t-shirt — one of those rare watches that fits everywhere.</p>
+            <div class="card-footer">
+              <span class="price">$3,800</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="latest">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600" alt="Classic 42">
+          <div class="card-body">
+            <h5 class="card-title">Classic 42</h5>
+            <p class="card-desc">Large 42mm case, silver dial, thin gold hands. Hand-wound movement with a 60-hour reserve. The alligator strap makes it feel luxurious, but the watch itself is understated. Made for people who like traditional Swiss watchmaking and want something special for formal events.</p>
+            <div class="card-footer">
+              <span class="price">$9,500</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="sport">
+        <div class="card-box">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.0Vh2sI1gpC0Sn5cyPH1FvgHaF7?w=600" alt="Big Bang Sport">
+          <div class="card-body">
+            <h5 class="card-title">Big Bang Sport</h5>
+            <p class="card-desc">Big 44mm case. Lightweight composite material. Ceramic bezel. Open face so you can see the movement working. If you want a watch that stands out without trying too hard, this is the one.</p>
+            <div class="card-footer">
+              <span class="price">$1,500</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="limited">
+        <div class="card-box">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.CUF6dW1XOndOvK9xIYMxuAHaEU?w=600" alt="Reversible Classic">
+          <div class="card-body">
+            <h5 class="card-title">Reversible Classic</h5>
+            <p class="card-desc">The whole case flips over. One side shows the time, the other is plain steel where you can get a name or message engraved. Designed for polo players years ago so the glass wouldn't break during a match. Different from anything else you'll see on someone's wrist.</p>
+            <div class="card-footer">
+              <span class="price">$11,000</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="limited">
+        <div class="card-box">
+          <img src="https://i.pinimg.com/736x/2f/b6/96/2fb696928b744b3f692dfeb025ce57b9.jpg" alt="Diver 300">
+          <div class="card-body">
+            <h5 class="card-title">Diver 300</h5>
+            <p class="card-desc">The most famous dive watch style in the world. Black face, rotating bezel, steel bracelet. 300m water resistance. You can wear it with a suit or with a t-shirt — it always looks right. If you only buy one watch in your life, this style is the safest bet.</p>
+            <div class="card-footer">
+              <span class="price">$12,000</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="latest">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600" alt="Date Classic">
+          <div class="card-body">
+            <h5 class="card-title">Date Classic</h5>
+            <p class="card-desc">A design that's been popular since 1945. Small date window on the right with a magnifying lens, 36mm case, Jubilee-style bracelet that feels comfortable all day. Not flashy, not boring — just right.</p>
+            <div class="card-footer">
+              <span class="price">$9,500</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="sport">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600" alt="Ocean Pro">
+          <div class="card-body">
+            <h5 class="card-title">Ocean Pro</h5>
+            <p class="card-desc">Dive watch that also looks good in everyday life. 42mm steel case, ceramic bezel, helium escape valve for deep-sea diving. Wear it swimming or to a meeting, it handles both without complaint.</p>
+            <div class="card-footer">
+              <span class="price">$6,500</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="limited">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600" alt="Cushion Crown">
+          <div class="card-body">
+            <h5 class="card-title">Cushion Crown</h5>
+            <p class="card-desc">Big cushion-shaped case with a metal guard around the crown. Black face with big glowing numbers. 44mm case — large, so it's best for people who like big watches. A favorite among collectors for its unique shape and Italian style.</p>
+            <div class="card-footer">
+              <span class="price">$8,500</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="smart">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600" alt="Precision Spring">
+          <div class="card-body">
+            <h5 class="card-title">Precision Spring</h5>
+            <p class="card-desc">Japanese watchmaking at its best. Case polished by hand to a mirror shine. Power reserve indicator shows how much energy is left. Spring Drive movement — very accurate, with a second hand that moves perfectly smoothly. If you want something different and very high quality, this is a great pick.</p>
+            <div class="card-footer">
+              <span class="price">$6,000</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="sport">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600" alt="Chrono Master">
+          <div class="card-body">
+            <h5 class="card-title">Chrono Master</h5>
+            <p class="card-desc">Sporty chronograph with a ceramic bezel and a partially open face. The movement inside beats 36,000 times per hour — very fast and accurate. A good choice if you like technical watches and want something that looks as fast as it runs.</p>
+            <div class="card-footer">
+              <span class="price">$10,500</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="latest">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600" alt="Master Classic">
+          <div class="card-body">
+            <h5 class="card-title">Master Classic</h5>
+            <p class="card-desc">Simple, classic dress watch. Silver face with a fine pattern, polished 40mm steel case, blue hands and numbers. Works well with a suit or smart casual. A safe choice if you want a dress watch that doesn't cost a fortune.</p>
+            <div class="card-footer">
+              <span class="price">$3,500</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="smart">
+        <div class="card-box">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.a1JDkhqUGSA6xZ6ahjdZbQHaHa?w=600" alt="Overseas Sport">
+          <div class="card-body">
+            <h5 class="card-title">Overseas Sport</h5>
+            <p class="card-desc">Luxury sports watch with an integrated bracelet — clean, modern look. 41mm case, automatic movement, 60-hour reserve. 150m water resistance, so you can wear it almost anywhere. Great for someone who wants one watch for everything — work, weekends, travel.</p>
+            <div class="card-footer">
+              <span class="price">$2,800</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="limited">
+        <div class="card-box">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.z0mzavfzBrDf8wx557J5EAHaHa?w=600" alt="Saxony Gold">
+          <div class="card-body">
+            <h5 class="card-title">Saxony Gold</h5>
+            <p class="card-desc">German watchmaking at the highest level. White gold case, silver face, hand-finished movement that looks amazing when you flip it over. It doesn't shout — but people who know watches will notice it right away. Quiet luxury.</p>
+            <div class="card-footer">
+              <span class="price">$24,000</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="latest">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600" alt="French Classique">
+          <div class="card-body">
+            <h5 class="card-title">French Classique</h5>
+            <p class="card-desc">Old French-style watch with a very detailed face — fine pattern cut into the metal, blue steel hands, coin-edge case side. Rose gold, 38mm. Hand-wound, 50-hour reserve. If you love traditional watchmaking and history, this one is special.</p>
+            <div class="card-footer">
+              <span class="price">$19,000</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="sport">
+        <div class="card-box">
+          <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600" alt="Alpine Sport">
+          <div class="card-body">
+            <h5 class="card-title">Alpine Sport</h5>
+            <p class="card-desc">Modern sports watch with a polished steel case and a face that has a texture like mountain rock. 41mm case, automatic movement, 60-hour reserve. A good all-round watch for someone who likes sporty but refined design.</p>
+            <div class="card-footer">
+              <span class="price">$14,000</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item hidden" data-cat="limited">
+        <div class="card-box">
+          <img src="https://i.pinimg.com/736x/97/37/9d/97379d03f75dbec54873a6f22ba6f921.jpg" alt="Captain Dive">
+          <div class="card-body">
+            <h5 class="card-title">Captain Dive</h5>
+            <p class="card-desc">Retro dive watch made with modern materials. 42mm steel case, ceramic bezel, slightly rounded glass for a vintage feel. 300m water resistance — a real diver. A nice balance of old and new.</p>
+            <div class="card-footer">
+              <span class="price">$2,800</span>
+              <button class="view-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="about-wrap" id="about">
+    <div class="E-pro">
+      <header>A Little About Us</header>
+      <p>
+        Alberto started in 1881 in La Chaux-de-Fonds, a small Swiss city where almost everyone worked in watchmaking. 
+        Rudolf Albert Riehle started by buying, repairing, and reselling pocket watches. 
+        By 1883 he had registered the business and started making his own watches in a small workshop. 
+        In 1903, his son Julien moved everything to Geneva to be closer to the luxury market. 
+        That move changed everything — from simple pocket watches to refined timepieces. 
+        Today the brand still makes watches in Switzerland, with the same focus on clean design and reliable movements. 
+        We're not the biggest name out there, but we've been doing this for over 140 years.
+      </p>
+    </div>
+    <div class="divider"><hr></div>
+  </div>
+
+  <div class="contact-wrap" id="contact">
+    <div class="contact">
+      <header>Contact To Us </header>
+      <div class="cards">
+
+        <div class="card">
+          <h2>Send a Message</h2>
+          <label for="fullname">Your Name</label>
+          <input type="text" id="fullname" placeholder="e.g. Ahmed Khan">
+
+          <label for="fathername">Father's Name</label>
+          <input type="text" id="fathername" placeholder="e.g. Ali Khan">
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com">
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+92 300 1234567">
+
+          <button type="submit">Send Message</button>
+        </div>
+
+        <div class="card">
+          <h2>Find Us</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-phone-line"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>(+92) 3433566582</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-mail-line"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>hello@apiforge.dev</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Address</h4>
+                <p>200 Congress Ave<br>Austin, TX 78701</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-time-line"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Working Hours</h4>
+                <p>Monday - Saturday<br>9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="popup">
+    <div class="popup-box">
+      <span id="popupClose">&times;</span>
+      <img id="popupImg" src="" alt="">
+      <div class="popup-content">
+        <h3 id="popupTitle"></h3>
+        <p id="popupDesc"></p>
+        <div class="popup-footer">
+          <span id="popupPrice"></span>
+          <button class="view-btn" style="pointer-events: none; opacity: 0.8;">View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Dropdown toggle
+    function toggleDropdown(e) {
+      e.stopPropagation();
+      document.getElementById('categoryDropdown').classList.toggle('open');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      document.getElementById('categoryDropdown').classList.remove('open');
+    });
+
+    // Category filter
+    document.querySelectorAll('.dropdown-item').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var cat = this.getAttribute('data-cat');
+        document.querySelectorAll('.card-item').forEach(function(card) {
+          if (card.getAttribute('data-cat') === cat) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        document.getElementById('categoryDropdown').classList.remove('open');
+      });
+    });
+
+    // Popup
+    var popup = document.getElementById('popup');
+
+    document.querySelectorAll('.card-box').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.classList.contains('view-btn')) {
+          return;
+        }
+        document.getElementById('popupImg').src = card.querySelector('img').src;
+        document.getElementById('popupTitle').innerText = card.querySelector('.card-title').innerText;
+        document.getElementById('popupDesc').innerText = card.querySelector('.card-desc').innerText;
+        document.getElementById('popupPrice').innerText = card.querySelector('.price').innerText;
+        popup.classList.add('show');
+      });
+    });
+
+    document.getElementById('popupClose').addEventListener('click', function() {
+      popup.classList.remove('show');
+    });
+
+    popup.addEventListener('click', function(e) {
+      if (e.target === popup) {
+        popup.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>
